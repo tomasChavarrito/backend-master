@@ -1,0 +1,154 @@
+[
+	{
+		"id": 1,
+		"title": "Pileta",
+		"description": "Una pileta",
+		"code": "1",
+		"price": 1000,
+		"stock": 0,
+		"status": true,
+		"category": "piletas",
+		"thumbnail": [
+			"/img/100x140x35.jpg"
+		]
+	},
+	{
+		"id": 2,
+		"title": "Placard",
+		"description": "Un placard",
+		"code": "2",
+		"price": 10000,
+		"stock": 0,
+		"status": true,
+		"category": "placares",
+		"thumbnail": [
+			"/img/cuatro.jpg",
+			"/img/dos.jpg"
+		]
+	},
+	{
+		"id": 3,
+		"title": "Ventilador",
+		"description": "Un ventilador",
+		"code": "3",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "ventiladores",
+		"thumbnail": [
+			"/img/ofertaVentilador1.jpg",
+			"/img/ofertaVentilador2.jpg",
+			"/img/ofertaVentilador3.jpg"
+		]
+	},
+	{
+		"id": 4,
+		"title": "Ventilador otro",
+		"description": "Un ventilador otro",
+		"code": "4",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "ventiladores",
+		"thumbnail": [
+			"/img/bonn.jpg"
+		]
+	},
+	{
+		"id": 5,
+		"title": "Otro ropero",
+		"description": "Esto es otro ropero",
+		"code": "5",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "placares",
+		"thumbnail": [
+			"/img/seis.jpg",
+			"/img/seisx2.jpg"
+		]
+	},
+	{
+		"id": 6,
+		"title": "Sillon1",
+		"description": "Esto es un sillon",
+		"code": "6",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "sillones",
+		"thumbnail": [
+			"/img/sillonItaliano1.jpg",
+			"/img/sillonItaliano2.jpg",
+			"/img/sillonItaliano3.jpg"
+		]
+	},
+	{
+		"id": 7,
+		"title": "Sillon2",
+		"description": "Esto es un sillon",
+		"code": "7",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "sillones",
+		"thumbnail": [
+			"/img/sofaCama1.jpg",
+			"/img/sofaCama2.jpg",
+			"/img/sofaCama3.jpg"
+		]
+	},
+	{
+		"id": 8,
+		"title": "Sillon3",
+		"description": "Esto es un sillon",
+		"code": "8",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "sillones",
+		"thumbnail": [
+			"/img/sillonItaliano6.jpg",
+			"/img/sillonItaliano7.jpg"
+		]
+	},
+	{
+		"id": 9,
+		"title": "Sillon4",
+		"description": "Esto es un sillon",
+		"code": "9",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "sillones",
+		"thumbnail": [
+			"/img/individual.jpg"
+		]
+	},
+	{
+		"id": 10,
+		"title": "Pileta grande",
+		"description": "Esto es una pileta",
+		"code": "10",
+		"price": 10000,
+		"stock": 2,
+		"status": true,
+		"category": "piletas",
+		"thumbnail": [
+			"/img/300x200x65.jpg"
+		]
+	},
+	{
+		"id": 11,
+		"title": "15",
+		"description": "15",
+		"code": "15",
+		"price": 15,
+		"stock": 15,
+		"category": "15",
+		"thumbnail": [
+			"/img/CE044540-8BEB-4CBE-B203-82788503DABB.PNG"
+		],
+		"status": true
+	}
+]
