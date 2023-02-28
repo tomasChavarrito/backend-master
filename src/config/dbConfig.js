@@ -1,5 +1,6 @@
-import mongoose from 'mongoose'
-import options from './options.js'
+const mongoose = require('mongoose')
+const options = require('./options')
+
 
 mongoose.set('strictQuery', false)
 mongoose.connect(options.mongoDB.url, (error) => {

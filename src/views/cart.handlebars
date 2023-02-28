@@ -2,10 +2,10 @@
 <div id="{{cartId}}" class="cart-list">
 {{#if products}}
     {{#each products}}
-        <div id={{productId._id}}>
-            <p>titulo: {{productId.title}}</p>
-            <p>Precio: ${{productId.price}}</p>
-            <p>Cantidad: {{quantity}}</p>
+        <div id={{product._id}} class="product-item">
+            <p>{{product.title}}</p>
+            <p>{{product.price}}</p>
+            <p>amount: {{quantity}}</p>
             <button onclick="removeProduct(event)">Remove</button>
         </div>
     {{/each}}
@@ -14,4 +14,4 @@
 {{/if}}
 </div>
 
-<script src="/js/cart.js"></script>
+<script src="/statics/js/cart.js"></script>

@@ -1,14 +1,42 @@
-import productModel from '../models/productModel.js'
-
+const productModel = require('../models/product.model')
 
 class ProductManagerMongo {
     
-    async getProducts( page, limit, order, available, category) {
-        
+    async getProducts({limit, page, query, sort}) {
         try {
-            const products = await productModel.paginate(
-                {"stock": available, category: category},
-                {page: page,limit: limit, sort: order})
+            let filter
+            
+            if(!query){
+                filter =  {}
+            }else if(query == 'true'){
+                filter = {status: true}
+            }else if(query== 'false'){
+                filter = {status: false}
+            }else{
+                filter = {category: query}
+            }
+
+            const options = {
+                sort: (sort ? {price: sort} : {}),
+                limit: limit || 10,
+                page: page || 1,
+                lean: true
+            }
+
+            const products = await productModel.paginate(filter,options)
+            
+            // const products = await productModel.aggregate([
+            //     {
+            //         $match: (query != undefined? {category: query}: {})
+            //     },
+            //     {
+            //         $sort:{ price: sort }
+            //     },
+            //     {
+            //         $limit: limit
+            //     }
+            // ])
+
             return products
         } catch (error) {
             throw new Error(error.message)
@@ -30,12 +58,13 @@ class ProductManagerMongo {
 
     async addProduct(product) {
         try{
+            await productModel.create(product)
+            console.log(`${product.title} added`)
             const newProduct = {
                 status: product.status || true,
+                thumbnails: product.thumbnails || [],
                 ...product
             }
-            await productModel.create(newProduct)
-            console.log(`${product.title} added`)
             return newProduct
         }
         catch(error){
@@ -46,7 +75,7 @@ class ProductManagerMongo {
     async updateProduct(id, product) {
         try{
             const updatedProduct = await productModel.updateOne({_id: id}, product)
-            console.log(`${id} modified`)
+            console.log(`${product.title ? product.title : 'product'} modified`)
             return updatedProduct
         }
         catch(error){
@@ -67,4 +96,4 @@ class ProductManagerMongo {
 
 }
 
-export default ProductManagerMongo
+module.exports = ProductManagerMongo
